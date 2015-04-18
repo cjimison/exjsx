@@ -17,7 +17,9 @@ defmodule EXJSX.Mixfile do
   end
 
   defp deps do
-    [{:jsx, "~> 2.4.0"}]
+    [
+        {:jsx,              git: "https://github.com/talentdeficit/jsx.git",        tag:    "v2.0.4"}
+    ]
   end
   
   defp description do

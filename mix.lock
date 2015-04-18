@@ -1,1 +1,1 @@
-%{"jsx": {:hex, :jsx, "2.3.0"}}
+%{"jsx": {:git, "https://github.com/talentdeficit/jsx.git", "8845c9acbe5450d0f51b5f3f33ede884e6d51fca", [tag: "v2.0.4"]}}
