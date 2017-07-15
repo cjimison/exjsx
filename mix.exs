@@ -5,9 +5,9 @@ defmodule EXJSX.Mixfile do
     [ app: :exjsx,
       version: "3.1.0",
       elixir: ">= 0.13.3",
-      description: description,
-      package: package,
-      deps: deps
+      description: description(),
+      package: package(),
+      deps: deps()
     ]
   end
 

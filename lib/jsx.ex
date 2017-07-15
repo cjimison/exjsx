@@ -139,11 +139,15 @@ defimpl JSX.Encoder, for: [Integer, Float, BitString] do
   def json(value), do: [value]
 end
 
-defimpl JSX.Encoder, for: HashDict do
-  def json(dict), do: JSX.Encoder.json(HashDict.to_list(dict))
+defimpl JSX.Encoder, for: Map do
+  def json(dict), do: JSX.Encoder.json(Map.to_list(dict))
 end
 
-defimpl JSX.Encoder, for: [Range, Stream, HashSet] do
+defimpl JSX.Encoder, for: Keyword do
+  def json(dict), do: JSX.Encoder.json(Map.to_list(dict))
+end
+
+defimpl JSX.Encoder, for: [Range, Stream, Set] do
   def json(enumerable) do
     JSX.Encoder.json(Enum.to_list(enumerable))
   end
